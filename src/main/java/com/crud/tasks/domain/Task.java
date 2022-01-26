@@ -14,6 +14,7 @@ public class Task {
 
     @Id
     @GeneratedValue
+    @Column(name = "id")
     private Long id;
 
     @Column(name = "name")
