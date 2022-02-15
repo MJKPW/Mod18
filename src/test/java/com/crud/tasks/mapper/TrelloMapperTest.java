@@ -72,10 +72,10 @@ class TrelloMapperTest {
         assertEquals("test", trelloCard.getDescription());
         assertEquals("center", trelloCard.getPos());
         assertEquals("1", trelloCard.getListId());
-        assertEquals("board id", trelloBoardsDto.get(0).getId());
-        assertEquals("first", trelloBoardsDto.get(0).getName());
-        assertEquals("list id", trelloBoardsDto.get(0).getLists().get(0).getId());
-        assertEquals("first list", trelloBoardsDto.get(0).getLists().get(0).getName());
+        assertEquals("board id", trelloBoardList.get(0).getId());
+        assertEquals("first", trelloBoardList.get(0).getName());
+        assertEquals("list id", trelloBoardList.get(0).getLists().get(0).getId());
+        assertEquals("first list", trelloBoardList.get(0).getLists().get(0).getName());
     }
 
 }
