@@ -25,10 +25,10 @@ public class EmailScheduler {
         String message = (size == 1)? " task": " tasks";
         simpleEmailService.send (
                 Mail.builder()
-                        .mailTo(adminConfig.getAdminMail())
-                        .subject(SUBJECT)
-                        .message("Currently in database you got: " + size + message)
-                        .build()
+                    .mailTo(adminConfig.getAdminMail())
+                    .subject(SUBJECT)
+                    .message("Currently in database you got: " + size + message)
+                    .build()
         );
     }
 }
