@@ -35,9 +35,6 @@ class TaskControllerTest {
     @Test
     public void getTasksTest() throws Exception {
         //Given
-        Task task = new Task(1L, "title", "content");
-        List<Task> list = List.of(task);
-        when(service.getAllTasks()).thenReturn(list);
         //Then
         //When
         mockMvc.perform(MockMvcRequestBuilders
