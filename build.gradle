@@ -47,6 +47,9 @@ dependencies {
 	implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.13.1'
 
 	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: '2.6.3'
+
+	implementation('org.springframework.boot:spring-boot-starter-thymeleaf')
+
 }
 
 test {
