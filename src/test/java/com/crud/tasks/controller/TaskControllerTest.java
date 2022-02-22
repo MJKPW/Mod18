@@ -38,7 +38,7 @@ class TaskControllerTest {
         //Then
         //When
         mockMvc.perform(MockMvcRequestBuilders
-                .get("/v1/task/getTasks")
+                .get("/v1/tasks")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().is(200));
     }
@@ -49,7 +49,7 @@ class TaskControllerTest {
         //Then
         //When
         mockMvc.perform(MockMvcRequestBuilders
-               .get("/v1/task/get")
+               .get("/v1/task")
                .contentType(MediaType.APPLICATION_JSON)
                .param("taskId", "1"))
                .andExpect(MockMvcResultMatchers.status().isOk());
@@ -61,7 +61,7 @@ class TaskControllerTest {
         //Then
         //When
         mockMvc.perform(MockMvcRequestBuilders
-                        .get("/v1/task/{taskId}", "1")
+                        .get("/v1/tasks/{taskId}", "1")
                         .contentType(MediaType.APPLICATION_JSON))
                         .andExpect(MockMvcResultMatchers.status().isOk());
     }
@@ -77,10 +77,10 @@ class TaskControllerTest {
         //Then
         //When
         mockMvc.perform(MockMvcRequestBuilders
-                        .put("/v1/task/updateTask")
+                        .put("/v1/tasks")
                         .content(jsonContent)
                         .contentType(MediaType.APPLICATION_JSON).characterEncoding("UTF-8"))
-                .andExpect(MockMvcResultMatchers.status().isOk());
+                        .andExpect(MockMvcResultMatchers.status().isOk());
     }
 
     @Test
@@ -94,7 +94,7 @@ class TaskControllerTest {
         //Then
         //When
         mockMvc.perform(MockMvcRequestBuilders
-               .post("/v1/task/createTask")
+               .post("/v1/tasks")
                .content(jsonContent)
                .contentType(MediaType.APPLICATION_JSON).characterEncoding("UTF-8"))
                .andExpect(MockMvcResultMatchers.status().isOk());
@@ -106,7 +106,7 @@ class TaskControllerTest {
         //Then
         //When
         mockMvc.perform(MockMvcRequestBuilders
-                        .delete("/v1/task/{taskId}", "1")
+                        .delete("/v1/{taskId}", "1")
                         .contentType(MediaType.APPLICATION_JSON))
                         .andExpect(MockMvcResultMatchers.status().isOk());
     }
